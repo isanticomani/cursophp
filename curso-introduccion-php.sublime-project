@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/ivansanticomaniserrano/Documents/midoconline/curso-avanzado-php"
+		}
+	],
+	"settings":
+ 	{
+     "xdebug": {
+         "path_mapping": {
+              "/home/vagrant/code/curso-introduccion-php" : "/Users/ivansanticomaniserrano/Documents/midoconline/curso-avanzado-php/curso-introduccion-php",
+          },
+          "url": "http://cursophp.test"
+      }
+  }
+}
