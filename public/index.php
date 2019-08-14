@@ -109,6 +109,14 @@ $map->post('contactSend', '/contact/send', [
     'App\Controllers\ContactController',
     'send'
 ]);
+$map->get('changePass', '/pass/change', [
+    'App\Controllers\AdminController',
+    'changePass'
+]);
+$map->post('updatePass', '/pass/update', [
+    'App\Controllers\AdminController',
+    'updatePass'
+]);
 
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
@@ -131,7 +139,7 @@ try{
     $log->warning($e->getMessage());
     $emitter = new SapiEmitter();
     $emitter->emit(new Response\EmptyResponse(400));
-} catch (Error $e) {
+} /* catch (Error $e) {
     $emitter = new SapiEmitter();
     $emitter->emit(new Response\EmptyResponse(500));
-}
+} */

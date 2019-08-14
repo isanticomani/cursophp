@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <div class="alert alert-primary" role="alert">
+        {{ responseMessage }}
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1>Change Password</h1>
+            <form action="/pass/update" method="POST">
+                <label for="">New Password:</label>
+                <input type="text" name="newPassword" ><br>
+                <label for="">Repeat Password:</label>
+                <input type="text" name="repeatPass"><br>
+                {# <label for="">Message:</label>
+                <input type="text" name="message"><br> #}
+                {# <input type="file" name="logo"><br> #}
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

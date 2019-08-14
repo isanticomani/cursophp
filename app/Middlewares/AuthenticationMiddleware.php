@@ -16,6 +16,12 @@ class AuthenticationMiddleware implements MiddlewareInterface
 				return new EmptyResponse(401);
 			}
 		}
+		if ($request->getUri()->getPath() === '/pass/change' ) {
+			$sessionUserId = $_SESSION['userId'] ?? null;
+			if (!$sessionUserId) {
+				return new EmptyResponse(401);
+			}
+		}
 		return $handler->handle($request);
 	}
 }
